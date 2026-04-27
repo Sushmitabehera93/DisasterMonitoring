@@ -8,18 +8,14 @@ and MongoDB.
 ## Architecture
 Data Sources → Kafka Producers → Kafka Topics → Spark Streaming → MongoDB → ML Training → Dashboard
 
----
-
 ## Data Sources
 
 - **USGS** — Earthquake events (magnitude, depth, location, tsunami alerts)
 - **NASA EONET** — Natural events (wildfires, floods, storms)
 - **FEMA** — Disaster declarations across US states
 
----
-
 ## Project Structure
-
+```
 |-- producers/
 │   |-- usgs_producer.py       # Fetches earthquake data → Kafka
 │   |-- eonet_producer.py      # Fetches NASA EONET events → Kafka
@@ -35,9 +31,7 @@ Data Sources → Kafka Producers → Kafka Topics → Spark Streaming → MongoD
 |-- setup_topics.py            # Kafka topic setup
 |-- docker-compose.yml         # MongoDB + Kafka containers
 | requirements.txt
-
----
-
+```
 ## Pipeline
 
 1. **Producers** fetch data from USGS, NASA EONET, and FEMA APIs and publish
@@ -51,8 +45,6 @@ Data Sources → Kafka Producers → Kafka Topics → Spark Streaming → MongoD
    - Seasonal trend analysis
 4. **Streamlit Dashboard** visualizes live data and ML insights
 
----
-
 ## ML Models
 
 | Model | Description | Result |
@@ -63,8 +55,6 @@ Data Sources → Kafka Producers → Kafka Topics → Spark Streaming → MongoD
 | Seasonal Analysis | Monthly/yearly event rate trends | 10,970 events |
 
 **Top features for risk scoring:** magnitude (49%), mag_squared (39%), depth (3%)
-
----
 
 ## Tech Stack
 
@@ -77,16 +67,12 @@ Data Sources → Kafka Producers → Kafka Topics → Spark Streaming → MongoD
 | Docker | Containerized Kafka + MongoDB |
 | Python | Core language |
 
----
-
 ## Prerequisites
 
 - Python 3.8+
 - Java JDK 11
 - Apache Spark 3.5.0
 - Docker Desktop
-
----
 
 ## How to Run
 
