@@ -6,13 +6,13 @@ and MongoDB.
 ---
 
 ## Architecture
-Data Sources → Kafka Producers → Kafka Topics → Spark Streaming → MongoDB → ML Training → Dashboard
+Data Sources -> Kafka Producers -> Kafka Topics -> Spark Streaming -> MongoDB -> ML Training -> Dashboard
 
 ## Data Sources
 
-- **USGS** — Earthquake events (magnitude, depth, location, tsunami alerts)
-- **NASA EONET** — Natural events (wildfires, floods, storms)
-- **FEMA** — Disaster declarations across US states
+- **USGS** - Earthquake events (magnitude, depth, location, tsunami alerts)
+- **NASA EONET** - Natural events (wildfires, floods, storms)
+- **FEMA** - Disaster declarations across US states
 
 ## Project Structure
 ```
