@@ -1,0 +1,10 @@
+kafka-python==2.3.0
+pyspark==3.5.1
+pymongo==4.16.0
+requests==2.33.1
+streamlit==1.56.0
+streamlit-folium==0.27.1
+folium==0.20.0
+pandas==3.0.2
+numpy==2.4.4
+plotly==6.6.0
