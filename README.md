@@ -30,21 +30,24 @@ Data Sources → Kafka Producers → Kafka Topics → Spark Streaming → MongoD
 
 ## Project Structure
 
-|-- producers/
-│   |-- usgs_producer.py       # Fetches earthquake data → Kafka
-│   |-- eonet_producer.py      # Fetches NASA EONET events → Kafka
-│   |-- fema_producer.py       # Fetches FEMA declarations → Kafka
-|-- spark/
-│   |-- stream_processor.py    # Spark Structured Streaming → MongoDB
-|-- ml/
-│   |-- batch_ml_training.py   # ML model training pipeline
-|-- database/
-│   |-- mongo_client.py        # MongoDB upsert helpers
-|-- dashboard/
-│   |-- app.py                 # Streamlit dashboard
-|-- setup_topics.py            # Kafka topic setup
-|-- docker-compose.yml         # MongoDB + Kafka containers
-| requirements.txt
+```
+├── producers/
+│   ├── usgs_producer.py          # Fetches earthquake data → Kafka
+│   ├── eonet_producer.py         # Fetches NASA EONET events → Kafka
+│   └── fema_producer.py          # Fetches FEMA declarations → Kafka
+├── spark/
+│   └── stream_processor.py       # Spark Structured Streaming → MongoDB
+├── ml/
+│   └── batch_ml_training.py      # ML model training pipeline
+├── database/
+│   └── mongo_client.py           # MongoDB upsert helpers
+├── dashboard/
+│   ├── app.py                    # Streamlit dashboard
+│   └── screenshots/              # Dashboard preview images
+├── setup_topics.py               # Kafka topic setup
+├── docker-compose.yml            # MongoDB + Kafka containers
+└── requirements.txt
+```
 
 ---
 
